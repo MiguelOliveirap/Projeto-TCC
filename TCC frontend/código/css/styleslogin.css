@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #4a76a8 0%, #1e2a44 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: #0a1428;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-logo {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    /* Remova esta linha se a logo já estiver branca */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #1e2a44;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #6a7b92;
+}
+
+.input-group .prefix-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.input-group input[type="password"] {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6a7b92;
+    cursor: pointer;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.forgot-password a {
+    color: #6a7b92;
+    text-decoration: none;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.btn-entrar {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(180deg, #003399 0%, #001133 100%);
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.btn-entrar:hover {
+    transform: scale(1.02);
+}
+
+.footer-text {
+    margin-top: 50px;
+    color: #6a7b92;
+    font-size: 12px;
+    line-height: 1.4;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.btn-menu {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(180deg, #003399 0%, #001133 100%);
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+
+}
