@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Satisfação do Cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Avalie Nosso Atendimento</h1>
+    </header>
+
+    
+    <main>
+        <!--seção do container do feedback-->
+        <section id="satisfaction-form">
+            <h2>Sua Opinião é Importante!</h2>
+            <p>Por favor, avalie sua experiência com nosso atendimento:</p>
+            <div class="rating-stars">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+            </div>
+            <textarea id="comments" placeholder="Conte para nós sua experiência (opcional)"></textarea>
+            <button id="submit-rating">Enviar Avaliação</button>
+        </section>
+
+        <p id="form-message" class="hidden"></p>
+        
+        <!--seção de resultados de satisfação-->
+        <section id="dashboard" class="hidden">
+            <h2>Resultados da Satisfação</h2>
+            <div class="dashboard-metrics">
+                <div class="metric-card">
+                    <h3>Avaliação Média</h3>
+                    <p id="average-rating">--</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Total de Avaliações</h3>
+                    <p id="total-ratings">--</p>
+                </div>
+            </div>
+            <h3>Comentários Recentes</h3>
+            <ul id="recent-comments"></ul>
+        </section>
+    </main>
+
+    <!-- parte do rodape-->
+    <footer>
+        <p>&copy; 2026 Sistema de Satisfação do Cliente. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
