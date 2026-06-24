@@ -1,0 +1,389 @@
+/* ============================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+
+.sidebar {
+    width: 210px;
+    background: linear-gradient(180deg, #0f1f3c 0%, #1a2f52 100%);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #b0c4de;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.nav-item.active {
+    background: rgba(100, 150, 255, 0.2);
+    color: #ffffff;
+    border-left: 3px solid #6496ff;
+    padding-left: 12px;
+}
+
+.nav-icon {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #4a7ba7 0%, #6b9fc9 100%);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+    background: rgba(15, 31, 60, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    right: auto;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* ============================================
+   CONTENT AREA
+   ============================================ */
+
+.content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* ============================================
+   GRID LAYOUT
+   ============================================ */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a2f52;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* ============================================
+   CHARTS
+   ============================================ */
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+#npsChart {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#satisfacaoChart {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ============================================
+   METRICS ROW
+   ============================================ */
+
+.metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    min-height: 200px;
+}
+
+.metric-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.metric-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a2f52;
+    font-style: italic;
+}
+
+.star-icon {
+    font-size: 20px;
+    color: #b0c4de;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star-icon:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+.metric-value {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.metric-gauge {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================
+   RESPONSIVO - TABLET
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   RESPONSIVO - MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+        justify-content: center;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .nav-item {
+        justify-content: center;
+        gap: 0;
+        padding: 10px;
+        font-size: 0;
+    }
+
+    .nav-icon {
+        font-size: 24px;
+    }
+
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .metrics-row {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .metric-card {
+        padding: 20px;
+    }
+
+    .metric-value {
+        font-size: 36px;
+    }
+}

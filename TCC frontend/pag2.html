@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASC - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Chart.js para os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="logo.png" alt="SASC Logo" class="sidebar-logo">
+            </div>
+            <nav class="menu">
+                <div class="menu-item active">
+                    <i class="fas fa-home"></i> <span>menu</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-chart-line"></i> <span>analises</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-cog"></i> <span>setores</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-users"></i> <span>respondentes</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-exclamation-triangle"></i> <span>alertas</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-file-alt"></i> <span>relatórios</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-tools"></i> <span>configurações</span>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="date-filter">
+                    DATA <span>13/06 A 20/06</span>
+                </div>
+                <div class="user-profile">
+                    <i class="far fa-user-circle"></i>
+                    <span>GESTOR</span>
+                </div>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- NPS Chart -->
+                <div class="card chart-card">
+                    <h3>NPS:</h3>
+                    <div class="chart-container">
+                        <canvas id="npsChart"></canvas>
+                    </div>
+                </div>
+
+                //satisfação do setor
+                <div class="card chart-card">
+                    <h3>Satisfação por setor:</h3>
+                    <div class="chart-container">
+                        <canvas id="sectorChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="card summary-card">
+                    <div class="card-header">
+                        <span>Avaliações</span>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="card-value">1.659</div>
+                </div>
+
+                <div class="card summary-card">
+                    <div class="card-header">
+                        <span>satisfação media</span>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="gauge-container">
+                        <canvas id="gaugeChart"></canvas>
+                        <div class="gauge-value">67%</div>
+                    </div>
+                </div>
+
+                <div class="card summary-card">
+                    <div class="card-header">
+                        <span>respondentes</span>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="card-value">534</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="pag2.js"></script>
+</body>
+</html>
